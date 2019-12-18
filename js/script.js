@@ -20,11 +20,16 @@ if (isNaN(chilometriTragitto)) {
     } else {
       if (etaPasseggero < 18) {
         costoBiglietto = costoBiglietto - scontoVenti;
+        var scontoApplicato = scontoVenti;
       } else if (etaPasseggero > 65) {
         costoBiglietto = costoBiglietto - scontoQuaranta;
+        scontoApplicato = scontoQuaranta;
+
       } else {
         costoBiglietto;
+        scontoApplicato = 0;
       }
+
     }
 
     // creo condizione sconto da visualizzare in riepilogo dati
@@ -34,6 +39,7 @@ if (isNaN(chilometriTragitto)) {
 
     // stampo il riepilogo Dati
     document.getElementById("chilometri-tragitto").innerHTML = chilometriTragitto;
-    document.getElementById("eta-passeggero").innerHTML = etaPasseggero;
+    document.getElementById("eta-passeggero").innerHTML = etaPasseggero; 
+    document.getElementById("sconto-applicato").innerHTML = scontoApplicato;
   }
 }
