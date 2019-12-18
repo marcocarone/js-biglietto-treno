@@ -10,13 +10,20 @@ var costoBiglietto = chilometriTragitto * costoUnChilometro;
 var scontoVenti = (costoBiglietto * 20) / 100;
 var scontoQuaranta = (costoBiglietto * 40) / 100;
 // creo una condizione
-if (etaPasseggero < 18) {
-costoBiglietto = costoBiglietto - scontoVenti;
-} else if (etaPasseggero > 65) {
-costoBiglietto = costoBiglietto - scontoQuaranta;
+if (isNaN(chilometriTragitto) || isNaN(etaPasseggero)) {
+  alert("Puoi inserire soltanto dei numeri. Riprova")
 } else {
-  costoBiglietto;
+  if (etaPasseggero < 18) {
+    costoBiglietto = costoBiglietto - scontoVenti;
+  } else if (etaPasseggero > 65) {
+    costoBiglietto = costoBiglietto - scontoQuaranta;
+  } else {
+    costoBiglietto;
+  }
 }
+
+// creo condizione sconto da visualizzare in riepilogo dati
+
 // stampo il costo del biglietto
 document.getElementById("costo-biglietto").innerHTML = costoBiglietto;
 

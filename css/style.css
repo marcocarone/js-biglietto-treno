@@ -29,3 +29,9 @@
 .container__dati span {
   padding: 20px;
 }
+
+@media screen and (max-width: 768px) {
+  .container__dati {
+    flex-direction: column;
+  }
+}
