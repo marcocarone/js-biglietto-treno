@@ -35,11 +35,11 @@ if (isNaN(chilometriTragitto)) {
     // creo condizione sconto da visualizzare in riepilogo dati
 
     // stampo il costo del biglietto
-    document.getElementById("costo-biglietto").innerHTML = costoBiglietto;
+    document.getElementById("costo-biglietto").innerHTML = costoBiglietto.toFixed(2);
 
     // stampo il riepilogo Dati
     document.getElementById("chilometri-tragitto").innerHTML = chilometriTragitto;
-    document.getElementById("eta-passeggero").innerHTML = etaPasseggero; 
-    document.getElementById("sconto-applicato").innerHTML = scontoApplicato;
+    document.getElementById("eta-passeggero").innerHTML = etaPasseggero;
+    document.getElementById("sconto-applicato").innerHTML = scontoApplicato.toFixed(2);
   }
 }
